@@ -3,32 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM JS</title>
-<style>
-    body{
-        background-color: black;
-        color: whitesmoke;
-        margin: 5rem;
-    }
-    .parrafo1 {
-        font-size: 25px;
-        color: burlywood;
-        font-weight: bold;        
-    }
-    button {
-        padding: 2rem;
-        border-radius: 1rem;
-        font-size: 20px;
-    }
-</style>
+    <title>Interacción con Múltiples Botones</title>
+    <style>
+        body {
+            background-color: #333; 
+            color: #f0f0f0; 
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center; 
+        }
+        header {
+            margin-bottom: 2rem;
+        }
+        .parrafo1 {
+            font-size: 25px;
+            color: #ffcc99; 
+            font-weight: bold;        
+        }
+        button {
+            padding: 1rem 2rem;
+            border-radius: 0.5rem; 
+            font-size: 18px; 
+            background-color: #4CAF50; 
+            color: white; 
+            border: none;
+            cursor: pointer; 
+            transition: background-color 0.3s; 
+            margin: 0.5rem; 
+        }
+        button:hover {
+            background-color: #45a049; 
+        }
+        header img {
+            max-width: 150px; 
+            height: auto; 
+            display: block;
+            margin: 0 auto 1rem; 
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Manipulacion del DONM con JS</h1>
+        
+        <img src="https://example.com/imagen-hobby.jpg" alt="Imagen del Hobby"> <!-- Reemplaza con tu imagen -->
+        <h1>¡Explorando Diversas Interacciones!</h1>
         <p id="miparrafo" class="parrafo1">Este es el texto original</p>
     </header>
     <section>
+      
+        <button id="fondoVerde">Fondo Verde</button>
+        <button id="fondoAzul">Fondo Azul</button>
+        <button id="fondoRosado">Fondo Rosado</button>
         
+        
+       
+      
+        <button id="botonTexto2">Texto Botón 2</button>
+        <button id="botonEstilo1">Estilo Botón 1</button>
+        <button id="botonEstilo2">Estilo Botón 2</button>
+
+        <script>
+     
+            const parrafo = document.getElementById("miparrafo");
+            
+        
+            function cambiarTexto1() {
+                parrafo.innerHTML = "¡Texto cambiado con Botón 1!";
+            }
+
+            function cambiarTexto2() {
+                parrafo.innerHTML = "¡Texto cambiado con Botón 2!";
+            }
+
+            function cambiarEstilo1() {
+                parrafo.style.color = '#00f'; 
+                parrafo.style.fontSize = '30px'; 
+            }
+
+            function cambiarEstilo2() {
+                parrafo.style.color = '#f00'; 
+                parrafo.style.fontSize = '20px'; 
+            }
+
+     
+            function cambiarFondoVerde() {
+                document.body.style.backgroundColor = '#4CAF50'; 
+            }
+
+            function cambiarFondoAzul() {
+                document.body.style.backgroundColor = '#2196F3';
+            }
+
+            function cambiarFondoRosado() {
+                document.body.style.backgroundColor = '#F58677'; 
+            }
+
+            function cambiarFondoAmarillo() {
+                document.body.style.backgroundColor = '#FFEB3B';
+            }
+
+           
+           
+            document.getElementById("botonTexto2").addEventListener("click", cambiarTexto2);
+            document.getElementById("botonEstilo1").addEventListener("click", cambiarEstilo1);
+            document.getElementById("botonEstilo2").addEventListener("click", cambiarEstilo2);
+
+          
+            document.getElementById("fondoVerde").addEventListener("click", cambiarFondoVerde);
+            document.getElementById("fondoAzul").addEventListener("click", cambiarFondoAzul);
+            document.getElementById("fondoRosado").addEventListener("click", cambiarFondoRosado);
+            document.getElementById("fondoAmarillo").addEventListener("click", cambiarFondoAmarillo);
+        </script>
     </section>
 </body>
 </html>
