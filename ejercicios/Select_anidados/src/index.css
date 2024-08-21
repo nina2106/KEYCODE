@@ -1,0 +1,66 @@
+/* App.css */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ad2f9e; /* Amarillo vibrante */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  color: #ffffff; /* Rojo vibrante */
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+p {
+  color: #2b0625; /* Azul vivo */
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+hr {
+  width: 80%;
+  margin: 20px 0;
+  border: 1px solid #ffffff; /* Naranja vivo */
+}
+
+.label-select {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #4b0f35;
+  font-size: 1rem;
+}
+
+select {
+  width: 250px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #9b59b6; /* Púrpura vivo */
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 1rem;
+  color: #2c3e50;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus {
+  border-color: #e08ab2; /* Rojo vivo */
+  outline: none;
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.5); /* Sombra roja */
+}
+
+select option {
+  padding: 10px;
+  background-color: #ffffff;
+  color: #2c3e50;
+}
+
+select:hover {
+  border-color: #3498db; /* Azul vivo */
+}
