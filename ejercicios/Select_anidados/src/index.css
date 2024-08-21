@@ -1,7 +1,6 @@
-/* App.css */
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #ad2f9e; /* Amarillo vibrante */
+  background: linear-gradient(135deg, #ad2f9e, #f39c12); /* Degradado de fondo */
   margin: 0;
   padding: 0;
   display: flex;
@@ -9,16 +8,18 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  color: #ffffff; /* Texto blanco para el cuerpo */
 }
 
 h1 {
-  color: #ffffff; /* Rojo vibrante */
+  color: #ffffff; /* Blanco puro */
   margin-bottom: 20px;
   font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
 }
 
 p {
-  color: #2b0625; /* Azul vivo */
+  color: #ffffff; /* Blanco puro */
   margin-bottom: 10px;
   font-size: 1.25rem;
 }
@@ -26,14 +27,15 @@ p {
 hr {
   width: 80%;
   margin: 20px 0;
-  border: 1px solid #ffffff; /* Naranja vivo */
+  border: 1px solid #ffffff; /* Blanco puro */
+  opacity: 0.7; /* Sombra sutil */
 }
 
 .label-select {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
-  color: #4b0f35;
+  color: #ffffff; /* Blanco puro */
   font-size: 1rem;
 }
 
@@ -41,26 +43,27 @@ select {
   width: 250px;
   padding: 10px;
   margin-bottom: 20px;
-  border: 2px solid #9b59b6; /* Púrpura vivo */
+  border: 2px solid transparent; /* Borde transparente para el fondo degradado */
   border-radius: 8px;
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #d49d51, #dd8e4d); /* Degradado de fondo en el select */
+  color: #ffffff; /* Texto blanco dentro del select */
   font-size: 1rem;
-  color: #2c3e50;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 select:focus {
-  border-color: #e08ab2; /* Rojo vivo */
+  border-color: #ffffff; /* Borde blanco cuando está en foco */
   outline: none;
-  box-shadow: 0 0 8px rgba(231, 76, 60, 0.5); /* Sombra roja */
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Sombra blanca en el enfoque */
 }
 
 select option {
   padding: 10px;
-  background-color: #ffffff;
-  color: #2c3e50;
+  background-color: #ffffff; /* Fondo blanco para opciones */
+  color: #2c3e50; /* Color del texto en opciones */
 }
 
+/* Efecto hover para el select */
 select:hover {
-  border-color: #3498db; /* Azul vivo */
+  border-color: #ffffff; /* Borde blanco en hover */
 }
