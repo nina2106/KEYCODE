@@ -1,24 +1,15 @@
-import { useFetch } from "../hooks/useFetch";
+import React from 'react';
 
-export const SelectList = ({ manejadorCambio, title, url }) => {
-  const key = `select-${title}`;
-  const label = title.toUpperCase();
-
-  const { data, error, loading } = useFetch(url);
-
-  if (loading) return <p>Cargando...</p>;
-  if (error) return <p>Ha ocurrido un error: {error.message}</p>;
-  if (!data || !Array.isArray(data)) return <p>No hay datos disponibles</p>;
-
+export const SelectList = ({ title, items, manejadorCambio }) => {
   return (
-    <div className="container-select">
-      <label className="label-select" htmlFor={key}>
-        {label}
-      </label>
-      <select name={key} id={key} onChange={manejadorCambio}>
-        <option value="">Seleccione un {title}</option>
-        {data.map((option) => (
-          <option key={option.id} value={option.id}>{option.name}</option>
+    <div className="select-list">
+      <label>{title}</label>
+      <select onChange={manejadorCambio}>
+        <option value="">Selecciona</option>
+        {items.map(item => (
+          <option key={item.id} value={item.id}>
+            {item.name}
+          </option>
         ))}
       </select>
     </div>
