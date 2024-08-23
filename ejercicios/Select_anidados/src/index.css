@@ -67,3 +67,26 @@ select option {
 select:hover {
   border-color: #ffffff; /* Borde blanco en hover */
 }
+
+/* Agrega esto a tu archivo de estilos CSS */
+.ciudad-card {
+  border: 6px solid #f39c12;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+  background: linear-gradient(135deg, #ca35b9, #f39c12);
+}
+
+.ciudad-card h2 {
+  margin-top: 0;
+}
+
+.ciudad-card p {
+  margin: 8px 0;
+}
+
+.ciudad-card strong {
+  display: inline-block;
+  width: 150px;
+}
+
