@@ -3,18 +3,17 @@ import { SelectList } from "./SelectList";
 
 export const Selects = () => {
   const TOKEN = "39afb11d-2dd4-4500-bcd3-01c7ce6a1b18";
-
+  
   // Estados para almacenar los datos de departamentos, municipios y ciudades
   const [departamentos, setDepartamentos] = useState([]);
   const [municipios, setMunicipios] = useState([]);
   const [ciudades, setCiudades] = useState();
   // console.log(departamentos)
   // console.log(municipios)
-   console.log(ciudades)
+ 
   // Estados para almacenar las selecciones actuales
   const [selectedDepartamento, setSelectedDepartamento] = useState("");
   const [selectedMunicipio, setSelectedMunicipio] = useState("");
-
 
   // Obtener departamentos al cargar el componente
   useEffect(() => {
@@ -26,7 +25,7 @@ export const Selects = () => {
     .then(response => response.json())
     .then(data => setDepartamentos(data || []))
     .catch(error => console.error("Error fetching departamentos:", error));
-  }, []);
+  }, [selectedDepartamento]);
 
   // Obtener municipios cuando se selecciona un departamento
   useEffect(() => {
@@ -74,8 +73,8 @@ export const Selects = () => {
         items={municipios}
         manejadorCambio={(event) => setSelectedMunicipio(event.target.value)}
       />
-      
-      {selectedMunicipio && ciudades && (
+
+      {selectedMunicipio && (
         <div className="ciudad-card">
           <h2>Información de la Ciudad</h2>
           <p><strong>Código Postal:</strong> {ciudades.postalCode}</p>
