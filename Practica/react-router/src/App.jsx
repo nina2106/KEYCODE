@@ -73,12 +73,12 @@ function App() {
           {/* Pagina de productos generales */}
           <Route
             path="/productos"
-            element={<Productos productos={productos} />}
+            element={<Productos productos={Productos} />}
           />
           {/* Pagina individual del producto */}
           <Route
             path="/productos/:id"
-            element={<ProductosDetalle productos={productos} />}
+            element={<ProductosDetalle Productos={Productos} />}
           />
           {/* Pagina general de servicios */}
           <Route path="/servicios" element={<Servicios />}>
@@ -89,15 +89,15 @@ function App() {
             {/* Ruta para la lista de servicios /servicios/lista */}
             <Route
               path="lista"
-              element={<ServiciosLista servicios={servicios} />}
+              element={<ServiciosLista servicios={Servicios} />}
             />
             {/* Ruta individual del servicio /servicios/:id */}
             <Route
               path=":id"
               element={
                 <>
-                  <ServiciosLista servicios={servicios} />
-                  <ServiciosDetalle servicios={servicios} />
+                  <ServiciosLista servicios={Servicios} />
+                  <ServiciosDetalle servicios={Servicios} />
                 </>
               }
             />
