@@ -1,6 +1,7 @@
-/* eslint-disable no-undef */
 import LanguageContext from "../context/LanguageContext";
 import AuthContext from "../context/AuthContext";
+import ThemeContext from "../context/ThemeContext";
+import { useContext } from "react";
 
 export const MainContext = () => {
   /**Aqui por medio del hook useContext, puedo acceder a la informacion  */
