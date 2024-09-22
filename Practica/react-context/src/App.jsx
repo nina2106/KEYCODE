@@ -13,3 +13,7 @@ function App() {
       <h1>App CON context</h1>
       <MyPageContext/>
     </>
+  )
+}
+
+export default App
