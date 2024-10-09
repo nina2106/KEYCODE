@@ -48,7 +48,7 @@ function App() {
           ))}
         </ul>
       ) : (
-        <p>No hay usuarios disponibles.</p>
+        <p>No hay usuarios disponible.</p>
       )}
     </>
   );
