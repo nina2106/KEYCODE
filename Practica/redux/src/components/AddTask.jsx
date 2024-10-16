@@ -27,7 +27,7 @@ const AddTask = () => {
         onChange={(e) => setTaskName(e.target.value)}
         className="p-2 mr-2 text-white border rounded"
       />
-      <button className='px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-800' onClick={createTask}>Agregar</button>
+      <button className='px-4 py-2 text-white bg-blue-900 rounded hover:bg-blue-800' onClick={createTask}>Agregar</button>
     </div>
   );
 };

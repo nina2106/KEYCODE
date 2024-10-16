@@ -49,7 +49,7 @@ const UserList = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 mt-100">
       <input
         type="text"
         placeholder="Nombre del usuario..."
@@ -70,7 +70,7 @@ const UserList = () => {
       ) : (
         <button
           onClick={handleAddUser}
-          className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-800"
+          className="px-4 py-2 text-white bg-blue-900 rounded hover:bg-blue-800"
         >
           Agregar usuario
         </button>
@@ -93,7 +93,7 @@ const UserList = () => {
             <button
               //onClick que ejecuta el dispatch con la accion de eliminar, pasando el id
               onClick={() => dispatch(deleteUser(user.id))}
-              className="px-4 ml-4 font-bold text-white bg-red-600 rounded"
+              className="px-4 ml-4 font-bold text-white bg-orange-600 rounded"
             >
               Eliminar
             </button>

@@ -22,14 +22,14 @@ const TaskList = () => {
         <li
           key={task.id}
           className={`flex  cursor-pointer  items-center justify-between mb-2 border p-2 rounded ${
-            task.completed ? "border-green-500" : "border-red-500"
+            task.completed ? "border-green-600" : "border-red-500"
           }`}
           onClick={() => handleComplete(task)}
         >
           <p className="flex-1 text-white">{task.name}</p>
           {/* <span>{task.completed ? 'Completado' : 'Pendiente'}</span> */}
           <button
-            className="px-4 ml-4 font-bold text-white bg-red-600 rounded"
+            className="px-4 ml-4 font-bold text-white bg-red-900 rounded"
             onClick={() => handleDelete(task.id)}
           >
             -
