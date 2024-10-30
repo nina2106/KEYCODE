@@ -1,8 +1,8 @@
 // Mensaje cifrado
-const mensajeCifrado = "^[()`~^*/?`[()^+`-~()#+[$()/~()%\\[]()}+[()[{=~¿()=$?%?!?]¡~()¿()`¬^~()[{=~()?+^[]=?()^\\{()*~¡[$[{()¡[()?=[]`\\¬]()¿()[{;+[$__~()`~]=]+~";
+const mensajeCifrado = "^[()`~^*/?`[()^+`-~()#[$()/~()%\\[]()}+[()[{=~¿()=$?%?!?]¡~()¿()`¬^~()[{=~()?+^[]=?()^\\{()*~¡[$[{()¡[()?=[]`\\¬]()¿()[{;+[$__~()`~]=]+~";
 
 // Mapeo de caracteres cifrados a letras
-const reemplazos = {
+let reemplazos = {
     '?': 'a',
     '[': 'e',
     '\\': 'i',
@@ -12,28 +12,27 @@ const reemplazos = {
     ')': ' ',   
     '/': 'l',
     '^': 'm',
-    '#': 'q',
+    '#': 'd', 
     '~': 'o',
-    '*': 'p',
-    '!': 'd',
+    '*': 'p',  
+    '!': 'b',
     '%': 'r',
     '-': 'h',
     '`': 'c',
+    '$': 's',  
+    
 };
 
 // Función para descifrar el mensaje
 function descifrar(mensaje) {
     let mensajeDescifrado = '';
-
     for (let char of mensaje) {
-        // Reemplaza cada carácter usando el mapeo definido
-        mensajeDescifrado += reemplazos[char] || ''; // Agrega el carácter original si no se encuentra
+        mensajeDescifrado += reemplazos[char] || ''; // Aplica el mapeo
     }
 
-    return mensajeDescifrado; // Retorna el mensaje descifrado
+    return mensajeDescifrado;
 }
 
-// Descifrar el mensaje
+// Descifrar el mensaje y mostrar el resultado
 const mensajeDescifrado = descifrar(mensajeCifrado);
-// Mostrar el resultado
 console.log('Mensaje descifrado:', mensajeDescifrado);
