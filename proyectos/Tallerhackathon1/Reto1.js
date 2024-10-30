@@ -19,7 +19,6 @@ const reemplazos = {
     '%': 'r',
     '-': 'h',
     '`': 'c',
-    
 };
 
 // Función para descifrar el mensaje
@@ -31,8 +30,7 @@ function descifrar(mensaje) {
         mensajeDescifrado += reemplazos[char] || ''; // Agrega el carácter original si no se encuentra
     }
 
-    // Limpiar espacios adicionales y caracteres no deseados
-    return mensajeDescifrado.replace(/\s+/g, ' ').trim();
+    return mensajeDescifrado; // Retorna el mensaje descifrado
 }
 
 // Descifrar el mensaje
