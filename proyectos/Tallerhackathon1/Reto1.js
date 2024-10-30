@@ -1,5 +1,5 @@
 // Mensaje cifrado
-const mensajeCifrado = `^[()^~^*/? \` [()^+^~~()#[$()/~()%\\[]()}+[()[{=~¿()= $?%?!?]¡~()¿()^~^~() [{=~()?+^[]=?()^\\{()*~¡[$[{()[()?=[]^\\-]()()[{; +[$_~() \`~]=\\]+~`;
+const mensajeCifrado = "^[()`~^*/?`[()^+`-~()#+[$()/~()%\\[]()}+[()[{=~¿()=$?%?!?]¡~()¿()`¬^~()[{=~()?+^[]=?()^\\{()*~¡[$[{()¡[()?=[]`\\¬]()¿()[{;+[$__~()`~]=]+~";
 
 // Mapeo de caracteres cifrados a letras
 const reemplazos = {
@@ -7,18 +7,18 @@ const reemplazos = {
     '[': 'e',
     '\\': 'i',
     '+': 'u',
-    'ó': 'ó',  // letra con acento
-    '(': ' ',  // espacio en blanco
-    ')': ' ',  // espacio en blanco
-    '#': 'l',  // letra común
-    '^': 's',  // letra común
-    '$': 't',  // letra común
-    '%': 'o',  // letra común
-    '*': 'n',  // letra común
-    '!': 'd',  // letra común
-    '~': 'r',  // letra común
-    '@': 'c',  // letra común
-    '`': 'h'    // letra común
+    '¬': 'ó',
+    '(': ' ',   
+    ')': ' ',   
+    '/': 'l',
+    '^': 'm',
+    '#': 'q',
+    '~': 'o',
+    '*': 'p',
+    '!': 'd',
+    '%': 'r',
+    '-': 'h',
+    '`': 'c',
 };
 
 // Función para descifrar el mensaje
@@ -30,11 +30,11 @@ function descifrar(mensaje) {
         mensajeDescifrado += reemplazos[char] || ''; // Agrega el carácter original si no se encuentra
     }
 
-    return mensajeDescifrado;
+    // Limpiar espacios adicionales y caracteres no deseados
+    return mensajeDescifrado.replace(/\s+/g, ' ').trim();
 }
 
 // Descifrar el mensaje
 const mensajeDescifrado = descifrar(mensajeCifrado);
-
 // Mostrar el resultado
 console.log('Mensaje descifrado:', mensajeDescifrado);
