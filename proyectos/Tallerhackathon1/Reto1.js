@@ -19,6 +19,7 @@ const reemplazos = {
     '%': 'r',
     '-': 'h',
     '`': 'c',
+    
 };
 
 // Función para descifrar el mensaje
